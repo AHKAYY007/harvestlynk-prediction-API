@@ -91,7 +91,7 @@ async def predict_pathogen(file: UploadFile = File(...)):
         logger.error(f"Prediction failed: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-
+@app.get('/')
 async def root():
     """healthcheck endpoint"""
     logger.info("Root health check healthy...")
