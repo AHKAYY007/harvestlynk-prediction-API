@@ -25,7 +25,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="Plant Pathology API", lifespan=lifespan)
 
-origins = ["http://localhost:3000", "https://harvestlynk.vercel.app"]
+origins = ["http://localhost:3000", "https://app-harvestlynk.vercel.app"]
 
 app.add_middleware(
     CORSMiddleware,
